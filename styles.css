@@ -13,7 +13,7 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 body {
   margin: 0;
   background:
@@ -286,7 +286,6 @@ body {
 .values-heading h2 {
   margin: 6px 0 6px;
   font-size: clamp(34px, 5vw, 46px);
-  white-space: nowrap;
 }
 .values-grid {
   display: grid;
@@ -409,6 +408,14 @@ body {
 }
 .form textarea { resize: vertical; }
 .form button { width: 100%; margin-top: 6px; }
+.form-status {
+  min-height: 20px;
+  margin: 2px 0 4px;
+  font-size: 14px;
+  color: var(--muted);
+}
+.form-status.success { color: #7ef7c4; }
+.form-status.error { color: #ff9fb3; }
 
 .cta-banner {
   background: transparent;
@@ -470,7 +477,6 @@ body {
   .cta-banner .cta { width: 100%; }
   .gallery-img { height: 160px; }
   .values-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-  .values-heading h2 { white-space: nowrap; }
 }
 
 @media (max-width: 600px) {

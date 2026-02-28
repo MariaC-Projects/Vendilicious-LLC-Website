@@ -35,7 +35,7 @@
               <a class="contact-row" href="mailto:vendiliciousllc@gmail.com"><span>✉️</span><span>vendiliciousllc@gmail.com</span></a>
               <img src="assets/logo.png" alt="Vendilicious logo" class="contact-logo" />
             </div>
-            <form class="card form" name="contact-form" action="#" method="post" onsubmit="alert('Hook this form up to your email or CRM.'); return false;">
+            <form class="card form" name="contact-form" action="https://formsubmit.co/ajax/info@vendiliciousllc.com" method="POST">
               <label>
                 <span>Your name</span>
                 <input type="text" name="name" required />
@@ -56,6 +56,10 @@
                 <span>What do you need?</span>
                 <textarea name="message" rows="4" placeholder="e.g., two drink machines for lobby and student lounge"></textarea>
               </label>
+              <input type="hidden" name="_subject" value="New Vendilicious website inquiry" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_captcha" value="false" />
+              <p class="form-status" role="status" aria-live="polite"></p>
               <button class="cta" type="submit">Send inquiry</button>
             </form>
           </div>
